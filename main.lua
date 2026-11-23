@@ -6,7 +6,18 @@ local EventBus = require("src.events.EventBus")
 
 local FeedbackSystem = require("src.systems.FeedbackSystem")
 
+local backgroundMusic
+
 function love.load()
+    backgroundMusic = love.audio.newSource(
+        "assets/Beach.wav",
+        "stream"
+    )
+
+    backgroundMusic:setLooping(true)
+    backgroundMusic:setVolume(0.5)
+    backgroundMusic:play()
+
     love.window.setMode(800, 600)
     love.window.setTitle("Dating Snake")
 
