@@ -2,7 +2,7 @@ local SnakeGameSystem = {}
 
 local GRID_SIZE = 20
 local MOVE_INTERVAL = 0.15
-local FLOWERS_TO_WIN = 5
+local FLOWERS_TO_WIN = 20
 
 local function is_occupied(game, x, y)
     for _, segment in ipairs(game.snake) do
