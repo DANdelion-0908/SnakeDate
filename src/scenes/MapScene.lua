@@ -123,12 +123,25 @@ function MapScene:keypressed(key)
     end
 
     if key == "e" then
-        if self.nearbyPoint and self.nearbyPoint.dialogueId then
-            local dialogue = DialogueData[
-                self.nearbyPoint.dialogueId
-            ]
+        if self.nearbyPoint then
 
-            self.dialogueUI:start(dialogue)
+            -- Iniciar minijuego del jardín.
+            if self.nearbyPoint.sceneId == "garden_snake" then
+                local GardenSnakeScene =
+                    require("src.scenes.GardenSnakeScene")
+
+                SceneManager.change(GardenSnakeScene)
+                return
+            end
+
+            -- Iniciar diálogo.
+            if self.nearbyPoint.dialogueId then
+                local dialogue = DialogueData[
+                    self.nearbyPoint.dialogueId
+                ]
+
+                self.dialogueUI:start(dialogue)
+            end
         end
 
         return

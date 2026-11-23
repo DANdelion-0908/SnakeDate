@@ -19,7 +19,7 @@ function MenuScene:render()
     love.graphics.setColor(1, 1, 1)
 
     love.graphics.printf(
-        "Dating Snake",
+        "Snake Date",
         0,
         220,
         800,

@@ -61,7 +61,8 @@ MapData.pointsOfInterest = {
         width = 120,
         height = 90,
         color = {1, 0.55, 0.75},
-        interactionLabel = "Minijuego de Snake (proximamente)"
+        sceneId = "garden_snake",
+        interactionLabel = "E - Minijuego de Snake"
     },
     {
         id = "pond",

@@ -18,7 +18,9 @@ function GameState.new()
         nextCardId = 1,
         feedback = {
             message = "Bienvenido a Snake Date"
-        }
+        },
+        
+        gardenSnakeCompleted = false
     }
 end
 

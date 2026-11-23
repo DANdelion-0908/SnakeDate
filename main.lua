@@ -19,7 +19,7 @@ function love.load()
     backgroundMusic:play()
 
     love.window.setMode(800, 600)
-    love.window.setTitle("Dating Snake")
+    love.window.setTitle("Snake Date")
 
     local gameState = GameState.new()
     local eventBus = EventBus.new()
